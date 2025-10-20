@@ -197,6 +197,15 @@ export default async function decorate(block) {
     brandLink.closest('.button-container').className = '';
   }
 
+  // Replace brand content with SYNCPOINT logo
+  if (navBrand) {
+    navBrand.innerHTML = `
+      <a href="/" aria-label="SYNCPOINT Home">
+        <img src="/icons/logo.png" alt="SYNCPOINT" />
+      </a>
+    `;
+  }
+
   const navSections = nav.querySelector('.nav-sections');
   if (navSections) {
     navSections.querySelectorAll(':scope .default-content-wrapper > ul > li').forEach((navSection) => {

@@ -1,6 +1,9 @@
 /* header and nav layout */
 header .nav-wrapper {
-  background-color: var(--background-color);
+  background: rgba(15, 18, 19, 0.85);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-bottom: 2px solid var(--sp-green);
   width: 100%;
   z-index: 2;
   position: fixed;
@@ -52,7 +55,12 @@ header nav p {
 }
 
 header nav a:any-link {
-  color: currentcolor;
+  color: var(--white);
+  transition: color 0.3s ease;
+}
+
+header nav a:hover {
+  color: var(--sp-green);
 }
 
 /* hamburger */
@@ -69,8 +77,8 @@ header nav .nav-hamburger button {
   border: 0;
   border-radius: 0;
   padding: 0;
-  background-color: var(--background-color);
-  color: inherit;
+  background-color: transparent;
+  color: var(--white);
   overflow: initial;
   text-overflow: initial;
   white-space: initial;
@@ -89,7 +97,7 @@ header nav .nav-hamburger-icon::before,
 header nav .nav-hamburger-icon::after {
   content: '';
   position: absolute;
-  background: currentcolor;
+  background: var(--white);
 }
 
 header nav[aria-expanded='false'] .nav-hamburger-icon,
@@ -97,7 +105,7 @@ header nav[aria-expanded='false'] .nav-hamburger-icon::before,
 header nav[aria-expanded='false'] .nav-hamburger-icon::after {
   height: 2px;
   border-radius: 2px;
-  background: currentcolor;
+  background: var(--white);
 }
 
 header nav[aria-expanded='false'] .nav-hamburger-icon::before {
@@ -139,14 +147,14 @@ header nav[aria-expanded='true'] .nav-hamburger-icon::after {
 /* brand */
 header .nav-brand {
   grid-area: brand;
-  flex-basis: 128px;
+  flex-basis: 200px;
   font-size: var(--heading-font-size-s);
   font-weight: 700;
   line-height: 1;
 }
 
 header nav .nav-brand img {
-  width: 128px;
+  width: 200px;
   height: auto;
 }
 
@@ -168,6 +176,7 @@ header nav .nav-sections ul {
   list-style: none;
   padding-left: 0;
   font-size: var(--body-font-size-s);
+  color: var(--white);
 }
 
 header nav .nav-sections ul > li {
@@ -243,7 +252,11 @@ header nav .nav-sections ul > li > ul > li {
     width: 200px;
     top: 150%;
     padding: 16px;
-    background-color: var(--light-color);
+    background-color: rgba(15, 18, 19, 0.95);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid var(--sp-green);
+    border-radius: 8px;
     white-space: initial;
     z-index: 1;
   }
@@ -257,7 +270,7 @@ header nav .nav-sections ul > li > ul > li {
     height: 0;
     border-left: 8px solid transparent;
     border-right: 8px solid transparent;
-    border-bottom: 8px solid var(--light-color);
+    border-bottom: 8px solid rgba(15, 18, 19, 0.95);
   }
 
   header nav .nav-sections .default-content-wrapper > ul > li > ul > li {
@@ -302,7 +315,7 @@ header .breadcrumbs ol {
 /* stylelint-disable-next-line no-descending-specificity */
 header .breadcrumbs ol li {
   padding: 0;
-  color: var(--dark-color);
+  color: var(--white);
 }
 
 header .breadcrumbs ol li:not(:last-child)::after {
@@ -312,7 +325,7 @@ header .breadcrumbs ol li:not(:last-child)::after {
 
 /* stylelint-disable-next-line no-descending-specificity */
 header .breadcrumbs ol li[aria-current] {
-  color: var(--text-color);
+  color: var(--sp-green);
 }
 
 @media (width >= 900px) {

@@ -11,6 +11,14 @@
  */
 
 :root {
+  /* core colors */
+  --white: #fff;
+  --black: #000;
+  --sp-deep-blue: #283252;
+  --sp-green: #06ba06;
+  --sp-dkgrey: #0f1213;
+  --sp-grey: #2e2e2e;
+
   /* colors */
   --background-color: white;
   --light-color: #f8f8f8;
@@ -37,7 +45,7 @@
   --heading-font-size-xs: 22px;
 
   /* nav heights */
-  --nav-height: 64px;
+  --nav-height: 80px;
   --breadcrumbs-height: 34px;
   --header-height: var(--nav-height);
 }
@@ -189,32 +197,41 @@ button {
   line-height: 1.25;
   text-align: center;
   text-decoration: none;
-  background-color: var(--link-color);
-  color: var(--background-color);
+  background-color: var(--sp-deep-blue);
+  color: var(--sp-green);
   cursor: pointer;
   text-overflow: ellipsis;
   white-space: nowrap;
+  transition: all 0.3s ease;
 }
 
 a.button:hover,
 a.button:focus,
 button:hover,
 button:focus {
-  background-color: var(--link-hover-color);
+  background-color: var(--sp-green);
+  color: var(--white);
   cursor: pointer;
 }
 
 button:disabled,
 button:disabled:hover {
-  background-color: var(--light-color);
+  background-color: var(--sp-grey);
+  color: var(--white);
   cursor: unset;
 }
 
 a.button.secondary,
 button.secondary {
   background-color: unset;
-  border: 2px solid currentcolor;
-  color: var(--text-color);
+  border: 2px solid var(--sp-deep-blue);
+  color: var(--sp-deep-blue);
+}
+
+a.button.secondary:hover,
+button.secondary:hover {
+  background-color: var(--sp-deep-blue);
+  color: var(--white);
 }
 
 main img {

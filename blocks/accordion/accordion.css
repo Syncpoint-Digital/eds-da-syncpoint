@@ -1,5 +1,8 @@
 .accordion details {
-  border: 1px solid #dadada;
+  border: 1px solid var(--sp-grey);
+  border-radius: 8px;
+  margin-bottom: 16px;
+  overflow: hidden;
 }
 
 /* stylelint-disable-next-line no-descending-specificity */
@@ -13,21 +16,26 @@
 
 .accordion details summary {
   position: relative;
-  padding: 0 16px;
+  padding: 16px;
   padding-right: 46px;
   cursor: pointer;
   list-style: none;
   overflow: auto;
-  transition: background-color 0.2s;
+  transition: background-color 0.3s ease;
+  background-color: var(--white);
+  color: var(--sp-dkgrey);
+  font-weight: 600;
 }
 
 .accordion details[open] summary {
-  background-color: var(--light-color);
+  background-color: var(--sp-green);
+  color: var(--white);
 }
 
 .accordion details summary:focus,
 .accordion details summary:hover {
-  background-color: var(--light-color);
+  background-color: var(--sp-deep-blue);
+  color: var(--white);
 }
 
 .accordion details summary::-webkit-details-marker {
@@ -52,10 +60,12 @@
 }
 
 .accordion details .accordion-item-body {
-  padding: 0 16px;
+  padding: 16px;
+  background-color: var(--white);
+  color: var(--sp-dkgrey);
 }
 
 .accordion details[open] .accordion-item-body {
-  border-top: 1px solid #dadada;
-  background-color: var(--background-color);
+  border-top: 1px solid var(--sp-green);
+  background-color: var(--white);
 }

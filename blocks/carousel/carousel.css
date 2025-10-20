@@ -67,7 +67,7 @@
   justify-content: center;
   gap: 6px 12px;
   padding: 12px;
-  background-color: var(--light-color);
+  background-color: var(--sp-dkgrey);
   line-height: 0;
 }
 
@@ -77,14 +77,14 @@
   margin: 0;
   padding: 0;
   border-radius: 50%;
-  background-color: #dadada;
-  transition: background-color 0.2s;
+  background-color: var(--sp-grey);
+  transition: background-color 0.3s ease;
 }
 
 .carousel .carousel-slide-indicator button:disabled,
 .carousel .carousel-slide-indicator button:hover,
 .carousel .carousel-slide-indicator button:focus-visible {
-  background-color: var(--text-color);
+  background-color: var(--sp-green);
 }
 
 .carousel .carousel-navigation-buttons {

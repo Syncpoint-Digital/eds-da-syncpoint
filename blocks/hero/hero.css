@@ -14,7 +14,7 @@
   margin-left: auto;
   margin-right: auto;
   color: var(--white);
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+  text-shadow: 2px 2px 4px rgb(0 0 0 / 70%);
 }
 
 .hero picture {

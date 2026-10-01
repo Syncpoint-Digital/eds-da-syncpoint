@@ -184,6 +184,20 @@ export default async function decorate(block) {
   nav.id = 'nav';
   while (fragment.firstElementChild) nav.append(fragment.firstElementChild);
 
+  // The NXP staging site has its own brand/navigation while sharing this EDS project.
+  if (window.location.pathname.startsWith('/content/nxp-documentation/')) {
+    const brand = nav.querySelector('.nav-brand');
+    if (brand) {
+      brand.innerHTML = '<a href="/content/nxp-documentation/index.html" aria-label="NXP Home"><img src="/icons/nxp-logo.svg" alt="NXP" /></a>';
+    }
+    const sections = nav.querySelector('.nav-sections');
+    if (sections) {
+      sections.innerHTML = '<div class="default-content-wrapper"><ul><li><a href="https://www.nxp.com/products:PC">Products</a></li><li><a href="https://www.nxp.com/applications:APPLICATIONS">Applications</a></li><li><a href="https://www.nxp.com/design:DESIGN">Design Center</a></li><li><a href="https://www.nxp.com/support:SUPPORT">Support</a></li><li><a href="https://www.nxp.com/company:COMPANY">Company</a></li></ul></div>';
+    }
+    const tools = nav.querySelector('.nav-tools');
+    if (tools) tools.innerHTML = '<div class="default-content-wrapper"><p><a href="https://www.nxp.com/security/login">Sign In / Register</a></p></div>';
+  }
+
   const classes = ['brand', 'sections', 'tools'];
   classes.forEach((c, i) => {
     const section = nav.children[i];
@@ -195,15 +209,6 @@ export default async function decorate(block) {
   if (brandLink) {
     brandLink.className = '';
     brandLink.closest('.button-container').className = '';
-  }
-
-  // Replace brand content with SYNCPOINT logo
-  if (navBrand) {
-    navBrand.innerHTML = `
-      <a href="/" aria-label="SYNCPOINT Home">
-        <img src="/icons/logo.png" alt="SYNCPOINT" />
-      </a>
-    `;
   }
 
   const navSections = nav.querySelector('.nav-sections');

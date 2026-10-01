@@ -1,0 +1,16 @@
+{
+  "definitions": [],
+  "models": [
+    {
+      "id": "title",
+      "fields": [
+        {
+          "component": "text",
+          "name": "jcr:title",
+          "label": "Title",
+          "valueType": "string"
+        }
+      ]
+    }
+  ]
+}

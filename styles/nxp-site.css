@@ -1,0 +1,140 @@
+body.nxp-site {
+  --body-font-family: Arial, roboto, sans-serif;
+  --heading-font-family: Arial, roboto, sans-serif;
+  --body-font-size-m: 16px;
+  --body-font-size-s: 14px;
+  --body-font-size-xs: 12px;
+  --heading-font-size-xxl: 40px;
+  --heading-font-size-xl: 30px;
+  --heading-font-size-l: 26px;
+  --heading-font-size-m: 20px;
+  --heading-font-size-s: 16px;
+  --heading-font-size-xs: 14px;
+  --nav-height: 62px;
+  line-height: 1.45;
+}
+
+body.nxp-site main > .section { margin: 0; }
+body.nxp-site main > .section > div { max-width: 1440px; }
+body.nxp-site .nxp-breadcrumbs { border-bottom: 1px solid #ddd; }
+body.nxp-site .nxp-breadcrumbs > div { max-width: none; padding: 0 28px; }
+body.nxp-site .nxp-breadcrumbs > div > div { display: flex; align-items: center; gap: 10px; height: 36px; color: #222; font-size: 13px; }
+body.nxp-site .nxp-breadcrumbs a { color: #222; }
+body.nxp-site .nxp-page-heading > div { max-width: none; padding: 20px 28px 30px; }
+body.nxp-site .nxp-page-heading h1 { margin: 0 0 14px; font-size: 40px; font-weight: 700; letter-spacing: -1.2px; }
+body.nxp-site .nxp-page-heading h2 { margin: 0; font-size: 20px; font-weight: 700; }
+body.nxp-site .nxp-search-band { background: #f7f6f3; }
+body.nxp-site .nxp-search-band > div { max-width: none; padding: 18px 28px; }
+body.nxp-site .nxp-doc-search { display: flex; max-width: 1070px; height: 46px; margin: 0 auto; border: 1px solid #d9d7d2; border-radius: 26px; background: #fff; overflow: hidden; }
+body.nxp-site .nxp-search-field { display: flex; flex: 1; min-width: 0; align-items: center; gap: 12px; padding: 0 16px; }
+body.nxp-site .nxp-search-field .icon-search { width: 16px; height: 16px; background: url('/icons/search.svg') center / contain no-repeat; }
+body.nxp-site .nxp-search-field input { width: 100%; border: 0; outline: 0; color: #222; font-size: 16px; }
+body.nxp-site .nxp-search-field input::placeholder { color: #707070; opacity: 1; }
+body.nxp-site .nxp-doc-search button { min-width: 90px; margin: 0; border: 0; border-radius: 0; padding: 0 17px; background: #080808; color: #fff; font-size: 12px; font-weight: 700; text-transform: uppercase; }
+body.nxp-site .nxp-doc-search button:hover { background: #333; }
+body.nxp-site .nxp-library > div { max-width: none; margin: 0; padding: 0; }
+body.nxp-site .nxp-library > div > div { display: grid; grid-template-columns: 252px minmax(0, 1fr); }
+body.nxp-site .nxp-filters { padding: 22px 24px 36px 28px; border-right: 1px solid #ddd; }
+body.nxp-site .nxp-filters section { margin: 0 0 20px; }
+body.nxp-site .nxp-filters h2 { margin: 0 0 10px; color: #747474; font-size: 11px; font-weight: 700; letter-spacing: .035em; text-transform: uppercase; }
+body.nxp-site .nxp-filters a { display: block; margin: 0 0 9px; color: #222; font-size: 13px; line-height: 1.35; }
+body.nxp-site .nxp-filters a span { white-space: nowrap; }
+body.nxp-site .nxp-filters .nxp-more { margin: 1px 0 0; border: 0; padding: 0; background: transparent; color: #3d6fa2; font-size: 13px; }
+body.nxp-site .nxp-filters .nxp-more:hover { background: transparent; color: #194b79; }
+body.nxp-site .nxp-filters .nxp-more-items { padding-top: 8px; }
+body.nxp-site .nxp-document-content { min-width: 0; padding: 0 9.2% 50px; }
+body.nxp-site .nxp-intro { padding: 29px 0 0; border-bottom: 1px solid #ddd; }
+body.nxp-site .nxp-intro p { max-width: 1080px; margin: 0 0 12px; font-size: 16px; line-height: 1.5; }
+body.nxp-site .nxp-tabs { display: flex; flex-wrap: wrap; gap: 0; padding-bottom: 17px; }
+body.nxp-site .nxp-tabs a { padding: 0 14px; border-right: 1px solid #ddd; color: #456e9c; font-size: 15px; line-height: 1.2; }
+body.nxp-site .nxp-tabs a:first-child { padding-left: 0; }
+body.nxp-site .nxp-tabs a:last-child { border-right: 0; }
+body.nxp-site .nxp-section { margin: 0; padding: 52px 0 42px; border-bottom: 1px solid #ddd; }
+body.nxp-site .nxp-section h2, body.nxp-site .nxp-collections h2 { margin: 0 0 18px; font-size: 28px; font-weight: 700; letter-spacing: -.45px; }
+body.nxp-site .nxp-category-links { display: flex; flex-wrap: wrap; gap: 8px; }
+body.nxp-site .nxp-category-links a { display: inline-flex; align-items: center; min-height: 42px; padding: 0 18px; border-radius: 24px; background: #f0eee8; color: #303030; font-size: 14px; }
+body.nxp-site .nxp-category-links a:hover { background: #e3e0d8; text-decoration: none; }
+body.nxp-site .nxp-software-links { display: flex; flex-wrap: wrap; gap: 8px; }
+body.nxp-site .nxp-software-links a { display: inline-flex; min-height: 43px; align-items: center; gap: 5px; padding: 0 17px; border: 1.5px solid #222; border-radius: 24px; color: #161616; font-size: 11px; font-weight: 700; text-transform: uppercase; }
+body.nxp-site .nxp-software-links a:hover { background: #f4f4f4; text-decoration: none; }
+body.nxp-site .nxp-software-links a span { font-size: 13px; }
+body.nxp-site .nxp-html p { max-width: 950px; font-size: 15px; line-height: 1.55; }
+body.nxp-site .nxp-html p a { color: #416f9f; text-decoration: underline; }
+body.nxp-site .nxp-collections { display: grid; grid-template-columns: 140px minmax(0, 1fr); gap: 28px; align-items: start; padding: 36px 0; border-bottom: 1px solid #ddd; }
+body.nxp-site .nxp-collection-icon { display: grid; place-items: center; width: 110px; height: 100px; margin-top: 4px; background: #f6f5f2; color: #3f789a; font-size: 60px; }
+body.nxp-site .nxp-collections h2 { max-width: 730px; margin-bottom: 13px; font-size: 23px; }
+body.nxp-site .nxp-collections p { max-width: 900px; margin: 0 0 16px; font-size: 14px; line-height: 1.6; }
+body.nxp-site .nxp-collections a, body.nxp-site .nxp-community a { color: #426f9e; font-size: 13px; }
+body.nxp-site .nxp-reference { border-bottom: 0; }
+body.nxp-site .nxp-reference h2 { margin-bottom: 22px; }
+body.nxp-site .nxp-reference table { width: 100%; border-collapse: collapse; font-size: 14px; }
+body.nxp-site .nxp-reference tr { border-bottom: 1px solid #e3e3e3; }
+body.nxp-site .nxp-reference th, body.nxp-site .nxp-reference td { padding: 11px 12px; text-align: left; vertical-align: top; }
+body.nxp-site .nxp-reference th { width: 220px; font-weight: 700; }
+body.nxp-site .nxp-community { background: #f6f5f2; }
+body.nxp-site .nxp-community > div { max-width: 1080px; margin: auto; padding: 38px 28px; }
+body.nxp-site .nxp-community > div > div { display: flex; gap: 26px; align-items: center; }
+body.nxp-site .nxp-community-icon { display: grid; flex: 0 0 62px; place-items: center; width: 62px; height: 62px; border-radius: 50%; background: #fff; color: #4c759a; font-size: 32px; }
+body.nxp-site .nxp-community h2 { margin: 0 0 8px; font-size: 22px; }
+body.nxp-site .nxp-community p { margin: 0 0 9px; font-size: 14px; }
+body.nxp-site .nxp-signin { background: #f2f2f2; }
+body.nxp-site .nxp-signin > div { max-width: 960px; padding: 48px 28px; text-align: center; }
+body.nxp-site .nxp-signin h2 { margin: 0 0 12px; color: #545454; font-size: 16px; font-weight: 400; }
+body.nxp-site .nxp-signin h3 { margin: 0 0 12px; font-size: 24px; }
+body.nxp-site .nxp-signin p { max-width: 760px; margin: 0 auto 18px; font-size: 14px; line-height: 1.6; }
+body.nxp-site .nxp-signin a { display: inline-flex; align-items: center; min-height: 42px; padding: 0 23px; border: 1px solid #333; border-radius: 24px; color: #1a1a1a; font-size: 12px; font-weight: 700; text-transform: uppercase; }
+body.nxp-site .nxp-signin a:hover { background: #fff; text-decoration: none; }
+body.nxp-site main .nxp-documentation > div { max-width: none; margin: 0; padding: 0; }
+
+body.nxp-site header .nav-wrapper { position: relative; z-index: 10; width: 100%; border-bottom: 1px solid #ddd; background: #fff; backdrop-filter: none; }
+body.nxp-site header nav { display: flex; justify-content: flex-start; gap: 0 28px; max-width: none; padding: 0 28px; font-family: Arial, sans-serif; }
+body.nxp-site header nav a:any-link { color: #171717; }
+body.nxp-site header nav a:hover { color: #176fae; }
+body.nxp-site header .nav-brand { flex: 0 0 93px; width: 93px; font-size: 0; }
+body.nxp-site header .nav-brand img { display: block; width: 93px; height: 32px; }
+body.nxp-site header nav .nav-sections { display: block; visibility: visible; flex: 1 1 auto; white-space: nowrap; }
+body.nxp-site header nav .nav-sections ul { display: flex; align-items: center; gap: 27px; margin: 0; color: #171717; font-size: 13px; }
+body.nxp-site header nav .nav-sections ul > li { font-weight: 700; text-transform: uppercase; }
+body.nxp-site header nav .nav-sections .default-content-wrapper > ul > li > a { position: relative; display: flex; align-items: center; height: 62px; }
+body.nxp-site header nav .nav-sections .default-content-wrapper > ul > li:nth-child(3) > a::after { position: absolute; right: 0; bottom: 0; left: 0; height: 3px; background: #fca600; content: ''; }
+body.nxp-site header nav .nav-tools { margin-left: auto; color: #3267a0; font-size: 13px; }
+body.nxp-site header nav .nav-hamburger-icon::before, body.nxp-site header nav .nav-hamburger-icon::after, body.nxp-site header nav[aria-expanded='false'] .nav-hamburger-icon { background: #171717; }
+body.nxp-site footer { border-top: 1px solid #ddd; background: #fff; color: #4c4c4c; font-size: 12px; }
+body.nxp-site footer .footer > div { max-width: 1440px; padding: 30px 28px 22px; }
+body.nxp-site footer .nxp-footer-main { display: flex; flex-wrap: wrap; align-items: center; gap: 20px 36px; margin-bottom: 28px; }
+body.nxp-site footer .nxp-footer-main img { display: block; width: 75px; height: auto; }
+body.nxp-site footer .nxp-footer-main nav { display: flex; flex-wrap: wrap; gap: 12px 24px; }
+body.nxp-site footer .nxp-footer-main a { color: #333; }
+
+@media (width <= 1000px) {
+  body.nxp-site .nxp-document-content { padding-right: 5%; padding-left: 5%; }
+  body.nxp-site .nxp-library > div > div { grid-template-columns: 220px minmax(0, 1fr); }
+  body.nxp-site .nxp-tabs a { padding: 7px 10px; }
+}
+
+@media (width <= 900px) {
+  body.nxp-site header nav { display: grid; grid-template: 'hamburger brand tools' 62px 'sections sections sections' auto / auto 1fr auto; gap: 0 14px; padding: 0 16px; }
+  body.nxp-site header nav[aria-expanded='true'] { grid-template: 'hamburger brand tools' 62px 'sections sections sections' 1fr / auto 1fr auto; min-height: 100dvh; }
+  body.nxp-site header .nav-brand { grid-area: brand; }
+  body.nxp-site header nav .nav-sections { display: none; visibility: hidden; grid-area: sections; }
+  body.nxp-site header nav[aria-expanded='true'] .nav-sections { display: block; visibility: visible; align-self: start; }
+  body.nxp-site header nav .nav-sections ul { display: block; }
+  body.nxp-site header nav .nav-sections ul > li { padding: 8px 0; }
+  body.nxp-site header nav .nav-tools { grid-area: tools; margin-left: 0; font-size: 11px; }
+}
+
+@media (width <= 700px) {
+  body.nxp-site .nxp-breadcrumbs > div, body.nxp-site .nxp-page-heading > div, body.nxp-site .nxp-search-band > div { padding-right: 16px; padding-left: 16px; }
+  body.nxp-site .nxp-page-heading h1 { font-size: 34px; }
+  body.nxp-site .nxp-library > div > div { display: block; }
+  body.nxp-site .nxp-filters { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; padding: 20px 16px; border-right: 0; border-bottom: 1px solid #ddd; }
+  body.nxp-site .nxp-filters section { margin-bottom: 4px; }
+  body.nxp-site .nxp-document-content { padding: 0 16px 34px; }
+  body.nxp-site .nxp-section { padding: 36px 0 30px; }
+  body.nxp-site .nxp-section h2 { font-size: 23px; }
+  body.nxp-site .nxp-collections { grid-template-columns: 75px minmax(0, 1fr); gap: 14px; }
+  body.nxp-site .nxp-collection-icon { width: 68px; height: 68px; font-size: 42px; }
+  body.nxp-site .nxp-reference th { width: 34%; }
+  body.nxp-site .nxp-reference th, body.nxp-site .nxp-reference td { padding: 9px 5px; font-size: 12px; }
+  body.nxp-site .nxp-community > div { padding: 30px 16px; }
+}

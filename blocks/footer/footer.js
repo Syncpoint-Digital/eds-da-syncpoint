@@ -16,5 +16,9 @@ export default async function decorate(block) {
   const footer = document.createElement('div');
   while (fragment.firstElementChild) footer.append(fragment.firstElementChild);
 
+  if (window.location.pathname.startsWith('/content/nxp-documentation/')) {
+    footer.innerHTML = '<div class="nxp-footer-main"><a href="https://www.nxp.com/" aria-label="NXP Home"><img src="/icons/nxp-logo.svg" alt="NXP" width="93" /></a><nav aria-label="Footer"><a href="https://www.nxp.com/about/about-nxp:ABOUT-NXP">About NXP</a><a href="https://www.nxp.com/support:SUPPORT">Support</a><a href="https://www.nxp.com/design/design-center/documentation:DOCUMENTATION">Documentation</a><a href="https://community.nxp.com/">Community</a><a href="https://www.nxp.com/contactus:CONTACT-US">Contact</a></nav><small>© NXP Semiconductors</small></div>';
+  }
+
   block.append(footer);
 }

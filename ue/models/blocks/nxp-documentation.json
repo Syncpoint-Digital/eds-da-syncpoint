@@ -1,0 +1,19 @@
+{
+  "definitions": [
+    {
+      "title": "NXP Documentation Library",
+      "id": "nxp-documentation",
+      "plugins": {
+        "da": { "unsafeHTML": "<div></div>" }
+      },
+      "model": "nxp-documentation"
+    }
+  ],
+  "models": [
+    {
+      "id": "nxp-documentation",
+      "fields": []
+    }
+  ],
+  "filters": []
+}

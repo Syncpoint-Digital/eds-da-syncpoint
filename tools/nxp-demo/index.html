@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>NXP Adobe EDS Demonstration</title>
+  <meta name="description" content="A guided walkthrough of Adobe Edge Delivery Services metadata and AEM Content Fragment delivery.">
+  <link rel="stylesheet" href="styles.css">
+  <script type="module" src="app.js"></script>
+</head>
+<body>
+  <header class="topbar"><a class="brand" href="#start">SYNCPOINT <span>× ADOBE</span></a><div class="session">NXP POC <i></i> GUIDED DEMO</div></header>
+  <main id="start">
+    <section class="intro">
+      <p class="eyebrow">ADOBE EDGE DELIVERY SERVICES · AEM AS A CLOUD SERVICE</p>
+      <h1>Metadata &amp; portability,<br>in the Adobe workflow.</h1>
+      <p class="lede">Follow the authoring path, inspect what Adobe publishes, then trace structured content into an external CMS.</p>
+      <div class="demo-nav"><a href="#metadata"><b>03</b> Metadata &amp; discoverability <span>↓</span></a><a href="#portability"><b>04</b> Content portability <span>↓</span></a></div>
+    </section>
+
+    <section id="metadata" class="demo-section">
+      <div class="section-heading"><span class="section-num">03</span><div><p class="eyebrow">AUTHOR → PUBLISH → DISCOVER</p><h2>Metadata &amp; semantic enrichment</h2></div><span class="surface-label">EDS · DOCUMENT AUTHORING</span></div>
+      <div class="walkthrough">
+        <nav class="step-nav" aria-label="Metadata demo steps">
+          <button class="step-button active" data-step="0"><span>01</span><b>Author page metadata</b><small>DA authoring source</small></button>
+          <button class="step-button" data-step="1"><span>02</span><b>Publish &amp; inspect</b><small>EDS page response</small></button>
+          <button class="step-button" data-step="2"><span>03</span><b>Search the index</b><small>Index Admin → JSON</small></button>
+          <button class="step-button" data-step="3"><span>04</span><b>Read structured data</b><small>JSON-LD in page head</small></button>
+        </nav>
+        <div class="walkthrough-main">
+          <div class="walkthrough-head"><div><p id="step-eyebrow" class="eyebrow">AUTHORING SOURCE</p><h3 id="step-title">Add metadata to the DA document</h3></div><span class="mode-pill"><i></i><span id="mode-label">EXAMPLE ARTIFACT</span></span></div>
+          <p id="step-copy" class="walkthrough-copy"></p>
+          <div class="artifact-wrap"><div class="artifact-bar"><span id="artifact-name">metadata-demo.html · authoring source</span><button id="copy-artifact" type="button">Copy example</button></div><pre id="artifact"></pre></div>
+          <div id="step-actions" class="step-actions"></div>
+          <p id="step-disclaimer" class="step-disclaimer"></p>
+        </div>
+      </div>
+      <div class="metadata-search">
+        <div class="search-copy"><p class="eyebrow">PUBLISHED INDEX</p><h3>Filter the indexed content</h3><p>Sample index records use the same fields the Adobe index configuration extracts from published pages.</p><div class="index-path"><i></i><code>/query-index.json</code><button id="download-index" type="button">Download sample JSON</button></div></div>
+        <div class="search-workspace"><label class="search-field"><span>⌕</span><input id="search-query" type="search" placeholder="Try calibration, AX-200, safety…"></label><div class="filter-row"><button class="filter active" data-filter="all">All <b id="all-count">3</b></button><button class="filter" data-filter="Public">Public</button><button class="filter" data-filter="Internal">Internal</button><button class="filter" data-filter="Restricted">Restricted</button></div><div id="search-results" class="results" aria-live="polite"></div></div>
+      </div>
+      <div class="callout"><b>Adobe environment boundary</b><span>This DA-based EDS repo demonstrates page metadata and query indexing. If NXP needs controlled AEM Tags or Assets metadata schemas, show those in an AEM author environment; that governance surface is not simulated here.</span></div>
+    </section>
+
+    <section id="portability" class="demo-section portability-section">
+      <div class="section-heading"><span class="section-num">04</span><div><p class="eyebrow">MODEL → DELIVER → CONSUME</p><h2>Content &amp; metadata portability</h2></div><span class="surface-label">AEM CONTENT FRAGMENTS · OPENAPI</span></div>
+      <div class="api-sequence"><div class="api-step"><span>01 · MODEL</span><b>Technical Article</b><small>Content Fragment Model</small></div><div class="sequence-arrow">→</div><div class="api-step"><span>02 · AUTHOR</span><b>AX-200 Calibration Guide</b><small>Content Fragment in Assets</small></div><div class="sequence-arrow">→</div><div class="api-step"><span>03 · DELIVER</span><b>Content Fragment API</b><small>Published JSON response</small></div><div class="sequence-arrow">→</div><div class="api-step active-api"><span>04 · CONSUME</span><b>External CMS</b><small>Mapped destination record</small></div></div>
+      <div class="api-workspace">
+        <div class="api-source">
+          <div class="panel-heading"><div><p class="eyebrow">AEM DELIVERY API RESPONSE</p><h3>Content Fragment JSON</h3></div><button id="copy-api-source" type="button">Copy</button></div>
+          <pre id="api-json" class="code-panel"></pre>
+          <div class="endpoint-form"><label for="endpoint-url">Published fragment endpoint <small>Use an authorized AEM Publish/Preview URL</small></label><div class="endpoint-controls"><input id="endpoint-url" type="url" placeholder="https://publish-PROGRAM-ENV.adobeaemcloud.com/adobe/contentFragments/…"><button id="fetch-endpoint" type="button">Fetch fragment</button></div><p id="endpoint-status" aria-live="polite">Showing illustrative sample response. Paste a real endpoint to replace it with live Adobe data.</p></div>
+        </div>
+        <div class="mapping-col"><span>FIELD<br>MAPPING</span><div>→</div><small>target schema</small></div>
+        <div class="api-target">
+          <div class="panel-heading"><div><p class="eyebrow">NON-ADOBE DESTINATION</p><h3>External CMS record</h3></div><span class="target-badge">technical-article</span></div>
+          <pre id="target-content" class="code-panel target-code"></pre>
+          <div class="mapping-legend"><span><i class="source-dot"></i> AEM field</span><span>→</span><span><i class="target-dot"></i> target field</span></div>
+        </div>
+      </div>
+      <div class="callout portability-callout"><b>Adobe environment boundary</b><span>The demo uses Adobe’s Content Fragment Delivery API shape. The live API call requires a published fragment, a reachable endpoint, and browser CORS access. No data is sent to another CMS; the destination record is rendered locally to show the mapping contract.</span></div>
+    </section>
+    <footer><span>SYNCPOINT DIGITAL × ADOBE</span><span>NXP POC · AREAS 03 &amp; 04</span></footer>
+  </main>
+</body>
+</html>

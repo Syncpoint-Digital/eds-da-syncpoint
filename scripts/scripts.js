@@ -55,6 +55,50 @@ function autolinkModals(doc) {
   });
 }
 
+function initNxpDocumentation(doc) {
+  const docsUrl = 'https://www.nxp.com/design/design-center/documentation:DOCUMENTATION';
+  const indexFields = 'PageTitle.code.RevisionNo.search_summary.type.format.Size.zhURL.ModifiedDate';
+  const submitSearch = (query, language = 'en') => {
+    const hash = `#/collection=documents&start=0&max=25&language=${encodeURIComponent(language)}&query=keyword%3E%3E${encodeURIComponent(query)}&fields=${indexFields}&siblings=false`;
+    window.location.assign(`${docsUrl}${hash}`);
+  };
+
+  doc.querySelector('.nxp-doc-search')?.addEventListener('submit', (event) => {
+    event.preventDefault();
+    const query = new FormData(event.currentTarget).get('q')?.toString().trim();
+    if (query) submitSearch(query);
+  });
+
+  doc.querySelectorAll('.nxp-filters .nxp-more').forEach((button) => {
+    button.addEventListener('click', () => {
+      const items = button.nextElementSibling;
+      if (!items?.classList.contains('nxp-more-items')) return;
+      const expanded = button.getAttribute('aria-expanded') === 'true';
+      button.setAttribute('aria-expanded', String(!expanded));
+      items.hidden = expanded;
+      button.lastElementChild.textContent = expanded ? '⌄' : '⌃';
+    });
+  });
+
+  doc.querySelectorAll('.nxp-filters a[href^="#"]').forEach((link) => {
+    link.addEventListener('click', (event) => {
+      const [key, ...parts] = link.hash.slice(1).split('=');
+      const value = decodeURIComponent(parts.join('='));
+      if (!value) return;
+      event.preventDefault();
+      if (key === 'language') {
+        const hash = `#/collection=documents&start=0&max=25&language=${encodeURIComponent(value)}&fields=${indexFields}&siblings=false`;
+        window.location.assign(`${docsUrl}${hash}`);
+        return;
+      }
+      const field = ['type', 'category', 'application'].includes(key) ? key : 'keyword';
+      const query = `${field}>>${value}`;
+      const hash = `#/collection=documents&start=0&max=25&language=en&query=${encodeURIComponent(query)}&fields=${indexFields}&siblings=false`;
+      window.location.assign(`${docsUrl}${hash}`);
+    });
+  });
+}
+
 /**
  * Builds all synthetic blocks in a container element.
  * @param {Element} main The container element
@@ -141,6 +185,10 @@ export function decorateMain(main) {
 async function loadEager(doc) {
   doc.documentElement.lang = 'en';
   decorateTemplateAndTheme();
+  if (window.location.pathname.startsWith('/content/nxp-documentation/')) {
+    doc.body.classList.add('nxp-site');
+    loadCSS(`${window.hlx.codeBasePath}/styles/nxp-site.css`);
+  }
   if (getMetadata('breadcrumbs').toLowerCase() === 'true') {
     doc.body.dataset.breadcrumbs = true;
   }
@@ -172,6 +220,7 @@ async function loadLazy(doc) {
 
   const main = doc.querySelector('main');
   await loadSections(main);
+  if (doc.querySelector('.nxp-doc-search')) initNxpDocumentation(doc);
 
   const { hash } = window.location;
   const element = hash ? doc.getElementById(hash.substring(1)) : false;

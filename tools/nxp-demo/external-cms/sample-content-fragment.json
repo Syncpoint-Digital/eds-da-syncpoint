@@ -1,0 +1,18 @@
+{
+  "id": "nxp-ax200-calibration-001",
+  "path": "/content/dam/nxp/content-fragments/ax200-calibration",
+  "title": "AX-200 Calibration Guide",
+  "model": {
+    "name": "TechnicalArticle"
+  },
+  "fields": {
+    "articleId": "NXP-AX200-CAL-001",
+    "title": "AX-200 Calibration Guide",
+    "body": "Verify sensor output, record the result, and return the controller to service.",
+    "product": "AX-200 controller",
+    "status": "Approved",
+    "classification": "Public",
+    "topic": "Calibration",
+    "lastReviewed": "2026-09-15"
+  }
+}

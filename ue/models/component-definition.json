@@ -26,6 +26,9 @@
       "id": "blocks",
       "components": [
         {
+          "...": "./blocks/nxp-documentation.json#/definitions"
+        },
+        {
           "...": "./blocks/*.json#/definitions"
         }
       ]

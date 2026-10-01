@@ -1,0 +1,45 @@
+.nxp-workflow,
+.nxp-index,
+.nxp-portability {
+  --nxp-ink: #173846;
+  --nxp-blue: #07334b;
+  --nxp-teal: #009d98;
+  --nxp-muted: #71858d;
+  --nxp-line: #dce5e7;
+  color: var(--nxp-ink);
+  font-family: var(--body-font-family);
+}
+.nxp-workflow .nxp-metadata-workflow{display:grid;grid-template-columns:minmax(190px,.32fr) minmax(0,1fr);background:#fff;border:1px solid var(--nxp-line)}
+.nxp-workflow .nxp-step-nav{padding:12px;border-right:1px solid var(--nxp-line);background:#f7f9f9}
+.nxp-workflow .nxp-step-button{display:flex;width:100%;gap:10px;align-items:center;padding:13px 10px;border:0;border-left:2px solid transparent;background:transparent;color:#58717a;text-align:left;cursor:pointer;font-size:13px}
+.nxp-workflow .nxp-step-button.active{border-left-color:var(--nxp-teal);background:#e9f5f3;color:#0a5862}
+.nxp-workflow .nxp-step-number,.nxp-workflow .nxp-eyebrow,.nxp-workflow .nxp-artifact-bar,.nxp-index .nxp-eyebrow,.nxp-index .nxp-index-status,.nxp-portability .nxp-eyebrow,.nxp-portability .nxp-api-status{color:var(--nxp-muted);font-family:monospace;font-size:11px;letter-spacing:.04em}
+.nxp-workflow .nxp-step-content{min-width:0;padding:23px}
+.nxp-workflow .nxp-step-content h3,.nxp-index .nxp-index-intro h3,.nxp-portability .nxp-api-panel h3{margin:5px 0 10px;color:var(--nxp-blue);font-size:21px}
+.nxp-workflow .nxp-step-copy,.nxp-portability .nxp-step-copy{color:#617781;font-size:14px;line-height:1.6}
+.nxp-workflow .nxp-artifact{border:1px solid var(--nxp-line);background:#f8fafa}
+.nxp-workflow .nxp-artifact-bar{display:flex;min-height:38px;justify-content:space-between;align-items:center;gap:10px;padding:5px 10px;border-bottom:1px solid var(--nxp-line);background:#eff4f4}
+.nxp-workflow .nxp-artifact-bar code{overflow-wrap:anywhere}
+.nxp-workflow .nxp-artifact pre,.nxp-portability .nxp-json-source,.nxp-portability .nxp-json-target{overflow:auto;max-height:300px;margin:0;padding:14px;color:#31505e;white-space:pre-wrap;overflow-wrap:anywhere;font:12px/1.65 monospace}
+.nxp-workflow .nxp-copy,.nxp-workflow .nxp-doc-links a,.nxp-portability .nxp-doc-links a{color:#087f80;font-size:12px}
+.nxp-workflow .nxp-copy{padding:5px 9px;border:1px solid var(--nxp-line);background:#fff;cursor:pointer}
+.nxp-workflow .nxp-doc-links,.nxp-portability .nxp-doc-links{display:flex;flex-wrap:wrap;gap:18px;margin-top:14px}
+.nxp-workflow .nxp-disclaimer,.nxp-portability .nxp-disclaimer{color:var(--nxp-muted);font-size:12px;line-height:1.55}
+.nxp-index .nxp-index-demo{margin-top:18px;padding:20px;border-top:1px solid var(--nxp-line);border-bottom:1px solid var(--nxp-line);background:#fff}
+.nxp-index .nxp-index-intro h3{margin-bottom:3px}.nxp-index .nxp-index-status{margin-top:4px}
+.nxp-index .nxp-search-input,.nxp-portability .nxp-endpoint-input{box-sizing:border-box;width:100%;padding:11px 12px;border:1px solid var(--nxp-line);background:#fbfcfc;color:var(--nxp-ink);font:inherit;font-size:14px}
+.nxp-index .nxp-index-filters{display:flex;flex-wrap:wrap;gap:7px;margin:12px 0}
+.nxp-index .nxp-filter{padding:6px 10px;border:1px solid var(--nxp-line);border-radius:20px;background:#fff;color:#657b82;cursor:pointer;font-size:12px}
+.nxp-index .nxp-filter.active{border-color:#b8e2dc;background:#e6f5f2;color:#08776c}
+.nxp-index .nxp-index-result{padding:12px 0;border-bottom:1px solid #edf1f2}.nxp-index .nxp-index-result>a{color:#144d60;font-size:15px;font-weight:600}
+.nxp-index .nxp-index-result p,.nxp-index .nxp-no-results{color:#72848b;font-size:13px}
+.nxp-index .nxp-index-tags{display:flex;flex-wrap:wrap;gap:5px}.nxp-index .nxp-index-tags span{padding:4px 6px;background:#f0f6f5;color:#587a7b;font:10px monospace}
+.nxp-portability .nxp-portability{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:0 20px;align-items:start}
+.nxp-portability .nxp-step-copy,.nxp-portability .nxp-doc-links,.nxp-portability .nxp-disclaimer{grid-column:1/-1}
+.nxp-portability .nxp-api-panel{min-width:0;margin:12px 0;border:1px solid var(--nxp-line);background:#fff}
+.nxp-portability .nxp-api-panel>.nxp-eyebrow,.nxp-portability .nxp-api-panel h3{margin-right:14px;margin-left:14px}
+.nxp-portability .nxp-api-panel>.nxp-eyebrow{margin-top:14px}.nxp-portability .nxp-api-panel h3{margin-top:4px}
+.nxp-portability .nxp-json-source,.nxp-portability .nxp-json-target{border-top:1px solid var(--nxp-line);background:#f7f9f9}.nxp-portability .nxp-target-panel .nxp-json-target{background:#f4f7fa}
+.nxp-portability .nxp-endpoint-label{display:block;margin:13px 14px 7px;color:#49646d;font-size:12px}.nxp-portability .nxp-endpoint-label input{display:block;margin-top:6px}
+.nxp-portability .nxp-fetch-button{margin:0 14px;padding:9px 12px;border:0;background:#087f80;color:white;cursor:pointer}.nxp-portability .nxp-api-status{margin:8px 14px 14px;line-height:1.5}
+@media(width<=700px){.nxp-workflow .nxp-metadata-workflow,.nxp-portability .nxp-portability{grid-template-columns:1fr}.nxp-workflow .nxp-step-nav{display:grid;grid-template-columns:1fr 1fr;border-right:0;border-bottom:1px solid var(--nxp-line)}.nxp-portability .nxp-step-copy,.nxp-portability .nxp-doc-links,.nxp-portability .nxp-disclaimer{grid-column:auto}}

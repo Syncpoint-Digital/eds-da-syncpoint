@@ -1,4 +1,4 @@
 mountpoints:
   /:
-    url: https://content.da.live/syncpoint-digital/eds-da-syncpoint/
+    url: https://author-p144686-e1553203.adobeaemcloud.com/bin/franklin.delivery/syncpoint-digital/eds-da-syncpoint/main
     type: markup
